@@ -8,8 +8,12 @@ path = '/Users/Anon/Downloads'
 os.chdir(path)
 
 for filename in os.listdir():
-    if filename.endswith('.torrent') or filename.endswith('.dmg'):
-        os.unlink(filename) print('%s is deleted' % filename)
+    if filename.endswith('.torrent'): 
+        os.unlink(filename) 
+        print('%s is deleted' % filename)
+    elif filename.endswith('.dmg'):
+        os.unlink(filename)
+        print('%s is deleted' % filename)
     elif filename.endswith('.zip'):
         try:
             zipf = zipfile.ZipFile(filename)
